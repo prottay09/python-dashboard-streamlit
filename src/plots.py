@@ -1,6 +1,6 @@
 import plotly.express as px
 import polars as pl
-from src.dataloader import sorted_data, df
+from dataloader import sorted_data, df
 
 def make_bar_plot(input_color_theme, df: pl.DataFrame = sorted_data):
     return px.bar(data_frame=df, x= "total_population", y="states", color_continuous_scale=input_color_theme)
